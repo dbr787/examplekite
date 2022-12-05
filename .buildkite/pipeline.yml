@@ -1,9 +1,11 @@
 steps:
-  - label: "Here is a step before a wait..."
-    command: "echo Here is a step before a wait..."
+  - label: "pre wait"
+    command: "echo This step occurred before a wait"
   - wait
-  - label: "Here is a step after a wait.."
-    command: "echo Here is a step after a wait..."
-  - block: "Here is a block step..."
-  - label: "Here is a step after a Block step..."
-    command: "echo Here is a step after a Block step..."
+  - label: "post wait"
+    command: "echo This step occurred after a wait"
+  - label: "pre block"
+    command: "echo This step occurred before a block"
+  - block: "block"
+  - label: "post block"
+    command: "echo This step occurred after a block"
